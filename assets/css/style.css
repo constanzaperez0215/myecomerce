@@ -1,0 +1,164 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* Contenedor General */
+
+.contenedor {
+    height: 100vh;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 0.3fr 1.6fr;
+    grid-template-rows: 0.2fr 2fr 0.2fr;
+    gap: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navbar navbar"
+      "asidebar productos"
+      "footer footer";
+      background-color: rgba(241, 241, 241, 0.966);
+  }
+
+
+  /* Nav Bar */
+
+  .navbar {
+    justify-content: center;
+    align-items: center;
+    grid-area: navbar;
+    background-color: rgba(13, 113, 116, 0.568);
+    
+    
+  }
+
+  h1{
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+  }
+
+
+  /* menú lateral */
+
+  .asidebar { grid-area: asidebar;
+    display: flex; 
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    
+}
+
+    .categorias{
+        display: flex;
+        gap: 5px;
+        margin: 10px;
+    }
+
+    
+    /* Titulo asidebar */
+
+    .asidebar h2{
+        font-size: 28px;
+        font-weight: 600;
+        
+        
+    }
+
+    .articulo{
+        font-weight: 500;
+        
+    }
+
+    .cantidad{
+        color: rgb(110, 112, 112);
+
+    }
+
+
+
+
+  /* productos */
+
+ .productos { grid-area: productos;
+    display: grid;
+    width: 100%;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "producto-1 producto-2 producto-3"
+        "producto-4 . .";
+    }
+
+    .producto-1 { grid-area: producto-1; }
+
+    .producto-2 { grid-area: producto-2; }
+
+    .producto-3 { grid-area: producto-3; }
+
+    .producto-4 { grid-area: producto-4; }
+
+    .producto{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        background-color: white;
+        margin: 0;
+        gap: 10px;
+    }
+
+    .descripcion{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        row-gap: 10px;
+    }
+    
+    /* boton productos */
+
+    .btn{
+    
+        width: 100%;
+        background-color: rgb(13, 113, 116, 0.568);
+        height: 35px;
+        color: white;
+        font-weight: 400;
+        padding: 0;
+
+    }
+
+    img{
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+    /* Footer */
+
+    .footer { grid-area: footer;
+        align-items: center;
+        background-color: rgba(13, 113, 116, 0.568);
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding-top: 8px;}
+
+    i{
+        color: green;
+        font-size: 25px;
+    }
